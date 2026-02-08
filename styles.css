@@ -1,0 +1,64 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #000;
+}
+
+#bgVideo {
+    position: fixed;
+    right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.5);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 3rem;
+    border-radius: 40px;
+    text-align: center;
+    z-index: 10;
+    width: 380px;
+}
+
+h2 {
+    color: white;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#yes {
+    background: linear-gradient(45deg, #ff2f7a, #ff8a71);
+    color: white;
+    z-index: 1001;
+    position: relative;
+}
+
+#no, .decoy-no {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    position: fixed; 
+    z-index: 9999; /* Higher z-index ensures it's always visible */
+    backdrop-filter: blur(5px);
+}
